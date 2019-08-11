@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.CronDao">
+
+    <sql id="allFeild">
+        id,
+        express,
+        status
+    </sql>
+
+    <select id="findById" resultType="com.example.demo.domain.Cron">
+        select
+           <include refid="allFeild"/>
+        from cron
+        where id=#{id}
+    </select>
+
+    <insert id="insertCron" parameterType="com.example.demo.domain.Cron">
+        insert into cron (
+            <include refid="allFeild"/>
+        )
+        values(
+          #{id},#{express},#{status}
+        )
+    </insert>
+
+    <update id="modifyCron" parameterType="com.example.demo.domain.Cron">
+        update cron
+        <set>
+            <if test="express != null and express !=''">
+                express=#{express},
+            </if>
+            <if test="id != status and status !=''">
+                status=#{status}
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <delete id="deleteCron">
+        delete from cron where id=#{id}
+    </delete>
+
+    <select id="queryByStatus" resultType="com.example.demo.domain.Cron">
+        select
+            <include refid="allFeild"/>
+        from cron where status='1'
+    </select>
+
+</mapper>
