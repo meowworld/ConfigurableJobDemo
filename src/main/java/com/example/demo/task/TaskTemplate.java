@@ -18,6 +18,9 @@ public class TaskTemplate implements Runnable{
     //业务数据
     @Setter
     private TaskInfo taskInfo;
+    
+     @Autowired
+    private ApplicationContextProvider contextProvider;
 
     //todo：线程开始执行
 
@@ -28,8 +31,8 @@ public class TaskTemplate implements Runnable{
 
         logger.error(" ----- 定时任务开始执行 -----");
 
-        CronService cronService = ApplicationContextProvider.applicationContext.getBean(CronService.class);
-        CronDao cronDao = ApplicationContextProvider.applicationContext.getBean(CronDao.class);
+        CronService cronService = contextProvider.applicationContext.getBean(CronService.class);
+        CronDao cronDao = contextProvider.applicationContext.getBean(CronDao.class);
 
 //        logger.info("业务参数 name"+name);
 //        logger.info("业务参数 data"+data);
