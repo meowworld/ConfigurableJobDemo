@@ -31,7 +31,7 @@ https://github.com/meowworld/ConfigurableJobDemo
 
 1.搭建一个基础的springboot工程
 
-![Image text](https://github.com/meowworld/ConfigurableJobDemo/blob/master/picture/%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84.png)
+![Image text](https://github.com/meowworld/ConfigurableJobDemo/blob/8570a175a8/picture/A工程pom引入.jpg)
 
 本工程的 resources 目录删除了，也没什么用。下面是pom.xml依赖，待会sdk要用到自动装配和http请求所以添加了下面依赖。
 
