@@ -31,7 +31,7 @@ https://github.com/meowworld/ConfigurableJobDemo
 
 1.搭建一个基础的springboot工程
 
-![Image text](https://github.com/meowworld/ConfigurableJobDemo/blob/8570a175a8/picture/A工程pom引入.jpg)
+![Image text](https://github.com/meowworld/ConfigurableJobDemo/blob/8570a175a8/picture/%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84.png)
 
 本工程的 resources 目录删除了，也没什么用。下面是pom.xml依赖，待会sdk要用到自动装配和http请求所以添加了下面依赖。
 
@@ -183,25 +183,26 @@ public class MeowClient {
 
 ​	1）: 在idea中 File --> ProjectStructure 
 
-![将代码打包](C:\Users\meow\Desktop\tu\将代码打包.png)
+![Image text](https://github.com/meowworld/ConfigurableJobDemo/blob/8570a175a8/picture/%E5%B0%86%E4%BB%A3%E7%A0%81%E6%89%93%E5%8C%85.png)
 
 2): Build --> Build Artifacts 
 
-![1565791698565](C:\Users\meow\Desktop\tu\build.png)
+![Image text](https://github.com/meowworld/ConfigurableJobDemo/blob/8570a175a8/picture/build.png)
+
 
 <!--这样sdk就OK啦-->
 
-![ok](C:\Users\meow\Desktop\tu\ok.png)
+![Image text](https://github.com/meowworld/ConfigurableJobDemo/blob/8570a175a8/picture/ok.png)
 
 4.别的工程怎么使用
 
 启动类上添加包扫描注解 @ComponentScan(basePackages = "com.test.sdk")
 
-![引用](C:\Users\meow\Desktop\tu\引用.png)
+![Image text](https://github.com/meowworld/ConfigurableJobDemo/blob/8570a175a8/picture/%E5%BC%95%E7%94%A8.png)
 
 
+![Image text](https://github.com/meowworld/ConfigurableJobDemo/blob/8570a175a8/picture/A%E5%B7%A5%E7%A8%8Bpom%E5%BC%95%E5%85%A5.jpg)
 
-![A工程pom引入](C:\Users\meow\Desktop\tu\A工程pom引入.jpg)
 
 <!--代码中使用sdk-->
 
