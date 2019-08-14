@@ -12,3 +12,7 @@ mybatis:
 logging:
   level:
     com.example.demo.dao : debug
+
+meow:
+  token: 2a8f885a7afca6324b9d263f82b7dc7d
+  dwzHost: https://dwz.cn/admin/v2/create
